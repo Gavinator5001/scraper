@@ -1,0 +1,7 @@
+beautifulsoup4
+playwright
+requests
+pypdf
+pdfplumber
+PyQt5
+git+https://github.com/CalMatters/fppc700-extract.git
