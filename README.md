@@ -26,8 +26,8 @@ On each run it:
 5. discovers minutes, downloads only new minutes files, parses vote rows, and writes the outputs
 
 
-## (RECOMMENDED)  
-Run the PyQt5 desktop app:
+## (How to Run)  
+Run the PyQt5 desktop app (recommended):
 
 ```bash
 python civic_vote_scraper_desktop_app_registry.py
@@ -72,4 +72,9 @@ The desktop app exposes the same flow with:
 - `Re-parse known minutes`: forces already parsed database records to be parsed again.
 - `Re-parse known Form 700 PDFs`: re-runs PDF parsing for saved filings.
 
+
+## Known Issues and Limitations
+
+- Minutes file matching is not 100% work
+- Can only pull from Legistar websites
 
