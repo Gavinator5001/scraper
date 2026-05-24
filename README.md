@@ -8,22 +8,11 @@ pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-## Live minutes and Form 700 sync
+## Project Overview
 
-The scraper now keeps a single SQLite database for:
+This project collects public meeting minutes and California Form 700 financial disclosure filings for a selected jurisdiction, stores them in a local database, and converts them into structured data for analysis. It downloads minutes PDFs, extracts vote and meeting information, syncs Form 700 filings from the FPPC portal, and parses disclosed entities such as businesses, properties, lenders, and income sources.
 
-- discovered minutes files
-- parsed vote rows
-- FPPC Form 700 filings for the selected jurisdiction
-- parsed Form 700 entity rows extracted from downloaded PDFs
-
-On each run it:
-
-1. searches the FPPC Form 700 portal for the current jurisdiction
-2. records every discovered filing in SQLite
-3. downloads only Form 700 PDFs that are not already in the database
-4. parses those PDFs into entity rows used for vote matching
-5. discovers minutes, downloads only new minutes files, parses vote rows, and writes the outputs
+The scraper also compares full minutes text against entities disclosed by politicians in the selected jurisdiction and exports the results as CSV and JSON files. A desktop interface is included for configuring searches, running live or one-time scrapes, and reviewing outputs, making the project a complete workflow for monitoring public records and identifying possible overlaps between government actions and reported financial interests.
 
 
 ## (How to Run)  
