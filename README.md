@@ -64,6 +64,6 @@ The desktop app exposes the same flow with:
 
 ## Known Issues and Limitations
 
-- Minutes file matching is not 100% work
+- Minutes file matching is not 100% working
 - Can only pull from Legistar websites
 
